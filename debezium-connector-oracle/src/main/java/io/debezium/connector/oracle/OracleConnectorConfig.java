@@ -172,11 +172,22 @@ public class OracleConnectorConfig extends RelationalDatabaseConnectorConfig {
 
         @Override
         public boolean isIncluded(TableId t) {
-            return !t.schema().toLowerCase().equals("system") &&
-                    !t.schema().toLowerCase().equals("sys") &&
-                    !t.schema().toLowerCase().equals("mdsys") &&
+            return !t.schema().toLowerCase().equals("appqossys") &&
                     !t.schema().toLowerCase().equals("ctxsys") &&
+                    !t.schema().toLowerCase().equals("dvsys") &&
+                    !t.schema().toLowerCase().equals("dbsfwuser") &&
+                    !t.schema().toLowerCase().equals("dbsnmp") &&
+                    !t.schema().toLowerCase().equals("gsmadmin_internal") &&
+                    !t.schema().toLowerCase().equals("lbacsys") &&
+                    !t.schema().toLowerCase().equals("mdsys") &&
+                    !t.schema().toLowerCase().equals("ojvmsys") &&
+                    !t.schema().toLowerCase().equals("olapsys") &&
+                    !t.schema().toLowerCase().equals("orddata") &&
+                    !t.schema().toLowerCase().equals("ordsys") &&
                     !t.schema().toLowerCase().equals("outln") &&
+                    !t.schema().toLowerCase().equals("sys") &&
+                    !t.schema().toLowerCase().equals("system") &&
+                    !t.schema().toLowerCase().equals("wmsys") &&
                     !t.schema().toLowerCase().equals("xdb");
         }
     }
